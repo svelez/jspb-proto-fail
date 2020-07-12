@@ -1,0 +1,13 @@
+{
+  "name": "jspb-proto-fail",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Steven Velez <steven.velez@oqton.com>",
+  "license": "MIT",
+  "dependencies": {
+    "protobufjs": "^6.9.0"
+  },
+  "scripts": {
+    "gen-proto": "./scripts/gen-proto.sh"
+  }
+}

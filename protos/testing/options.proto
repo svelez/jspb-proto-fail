@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package testing;
+
+import "google/protobuf/descriptor.proto";
+
+message SubOpts {
+  string first = 1;
+  int32 second = 2;
+}
+
+message Options {
+  string s_str = 1;
+  int32 s_int = 2;
+  SubOpts s_msg = 3;
+
+  repeated string r_str = 4;
+  repeated int32 r_int = 5;
+  repeated SubOpts r_msg = 6;
+}
+
+extend google.protobuf.FieldOptions { Options options = 90010; }

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package testing;
+
+import "testing/options.proto";
+
+message RSFail {
+  string annotated = 1 [ (testing.options) = {r_str : [ "x", "y", "z" ]} ];
+}

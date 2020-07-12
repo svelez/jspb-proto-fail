@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package testing;
+
+import "testing/options.proto";
+
+message RMFail {
+  string annotated = 1
+      [ (testing.options) = {r_msg : [ {first : "foo"}, {second : 20} ]} ];
+}

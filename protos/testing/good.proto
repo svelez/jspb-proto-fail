@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package testing;
+
+import "testing/options.proto";
+
+message Good {
+  string annotated = 1 [ (testing.options) = {
+    s_str : "foo",
+    s_int : 10,
+    s_msg : {
+      first : "bar",
+      second : 30,
+    }
+  } ];
+}

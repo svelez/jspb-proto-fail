@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package testing;
+
+import "testing/options.proto";
+
+message RIFail {
+  string annotated = 1 [ (testing.options) = {r_int : [ 5, 4, 3, 2, 1 ]} ];
+}
